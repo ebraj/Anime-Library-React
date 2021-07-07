@@ -14,9 +14,11 @@ const Header = (props) => {
     setSearch("");
   };
   return (
-    <div className="p-4 bg-blue-500 bg-opacity-10 flex flex-nowrap justify-between items-center">
-      <h2 className="font-bold text-gray-100 text-xl">📙AnimeLibrary</h2>
-      <form onSubmit={submitSearchFun}>
+    <div className="p-4 bg-blue-500 bg-opacity-10 flex flex-col flex-nowrap justify-between items-center sm:flex-row">
+      <h2 className="font-bold text-gray-100 text-xl sm:p-0 p-4">
+        📙AnimeLibrary
+      </h2>
+      <form onSubmit={submitSearchFun} className="text-center">
         <input
           onChange={searchedTermFun}
           value={search}

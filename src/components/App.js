@@ -3,15 +3,16 @@ import axios from "axios";
 
 // Importing the components
 import Header from "./Header";
-import AnimeCard from "./AnimeCard";
+import AnimeCardContainer from "./AnimeCardContainer";
 
 const App = () => {
-  const [searchedTerm, setSearchedTerm] = useState("");
+  const [searchedList, setSearchedList] = useState("");
   const [results, setResults] = useState([]);
   const getDatas = async (_temp) => {
     const result = await axios.get("https://api.jikan.moe/v3/search/anime", {
       params: {
         q: `${_temp}`,
+        limit: 12,
       },
     });
     const obtainedResults = result.data.results;
@@ -19,22 +20,14 @@ const App = () => {
   };
   //Getting the search term
   const getSearchedTerm = (_temp) => {
-    setSearchedTerm(_temp);
+    setSearchedList(_temp);
     getDatas(_temp);
   };
   return (
     <>
       <Header getSearchedTerm={getSearchedTerm} />
-      <div>
-        {results.map((result) => {
-          return (
-            <AnimeCard
-              animeTitle={result.title}
-              animeImage={result.image_url}
-            />
-          );
-        })}
-      </div>
+      <div className="h-8"></div>
+      <AnimeCardContainer obtainedList={results} />
     </>
   );
 };

@@ -4,5 +4,10 @@
 @tailwind utilities;
 
 body{
-background-color: #070714;
+    background-color: #070714;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
 }

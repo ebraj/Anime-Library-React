@@ -6,24 +6,25 @@ import Header from "./Header";
 import AnimeCard from "./AnimeCard";
 
 const App = () => {
+  const [searchedTerm, setSearchedTerm] = useState("");
   const [results, setResults] = useState([]);
-  const getDatas = async () => {
+  const getDatas = async (_temp) => {
     const result = await axios.get("https://api.jikan.moe/v3/search/anime", {
       params: {
-        q: "Death Note",
+        q: `${_temp}`,
       },
     });
     const obtainedResults = result.data.results;
-    // console.log(obtainedResults);
     setResults(obtainedResults);
   };
-  console.log(results);
+  //Getting the search term
+  const getSearchedTerm = (_temp) => {
+    setSearchedTerm(_temp);
+    getDatas(_temp);
+  };
   return (
     <>
-      <Header />
-      {/* <div className="bg-pink-200 text-center p-5">
-        <button onClick={getDatas}>SHOW NARUTO ANIME</button>
-      </div> */}
+      <Header getSearchedTerm={getSearchedTerm} />
       <div>
         {results.map((result) => {
           return (

@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Header = () => {
+const Header = (props) => {
+  // Object Destructuring
+  const { getSearchedTerm } = props;
+  const [search, setSearch] = useState("");
+  //Creating the search term functions
+  const searchedTermFun = (e) => {
+    setSearch(e.target.value);
+  };
+  const submitSearchFun = (e) => {
+    e.preventDefault();
+    getSearchedTerm(search);
+    setSearch("");
+  };
   return (
-    <div className="p-4 bg-green-500 flex flex-nowrap justify-between items-center">
-      <h2 className="font-bold text-gray-900 text-xl">📙AnimeLibrary</h2>
-      <form>
+    <div className="p-4 bg-blue-500 bg-opacity-10 flex flex-nowrap justify-between items-center">
+      <h2 className="font-bold text-gray-100 text-xl">📙AnimeLibrary</h2>
+      <form onSubmit={submitSearchFun}>
         <input
+          onChange={searchedTermFun}
+          value={search}
           type="text"
           placeholder="Search for Anime"
-          className="px-6 py-3 bg-green-800 bg-opacity-50 placeholder-gray-300 outline-none text-white"
+          className="uppercase px-6 py-3 bg-blue-100 bg-opacity-10 placeholder-gray-500 outline-none text-gray-100 rounded-sm"
         />
+        <button className="m-1 px-6 py-3 bg-pink-500 text-gray-100 rounded-sm">
+          Search
+        </button>
       </form>
     </div>
   );

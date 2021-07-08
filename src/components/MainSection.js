@@ -6,7 +6,7 @@ const MainSection = (props) => {
   const { obtainedList } = props;
   return (
     <div className="container mx-auto">
-      <div className="flex flex-row">
+      <div className="flex flex-col sm:flex-row">
         <Sidebar />
         <AnimeCardContainer
           obtainedList={obtainedList}

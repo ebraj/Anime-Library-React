@@ -24,7 +24,7 @@ const Sidebar = () => {
     getTopCharacters();
   }, []);
   return (
-    <div className="bg-blue-500 bg-opacity-10 mr-10 w-96 rounded-sm text-gray-100">
+    <div className="bg-blue-500 bg-opacity-10 mr-6 order-last sm:order-none w-full sm:w-96 rounded-sm text-gray-100">
       <div>
         <h1 className="uppercase bg-pink-600 px-3 py-4 rounded-sm">
           Top 5 Animes🔥

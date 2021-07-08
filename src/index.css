@@ -11,11 +11,6 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }
-/* .card-grid-container{
-    display: grid;
-    grid-template-rows: 400px;
-} */
-
 
 img{
     width: 100%;

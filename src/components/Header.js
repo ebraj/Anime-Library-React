@@ -26,7 +26,7 @@ const Header = (props) => {
           placeholder="Search for Anime"
           className="uppercase px-6 py-3 bg-blue-100 bg-opacity-10 placeholder-gray-500 outline-none text-gray-100 rounded-sm"
         />
-        <button className="m-1 px-6 py-3 bg-pink-500 text-gray-100 rounded-sm">
+        <button className="m-1 px-6 py-3 bg-pink-500 hover:bg-pink-600 text-gray-100 rounded-sm">
           Search
         </button>
       </form>

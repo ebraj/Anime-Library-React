@@ -6,7 +6,7 @@ const AnimeCardContainer = (props) => {
   const { obtainedList } = props;
   console.log(obtainedList);
   return (
-    <div className="grid-container container mx-auto">
+    <div className="grid-container gap-4 w-full">
       {obtainedList.map((item) => {
         return (
           <AnimeCard

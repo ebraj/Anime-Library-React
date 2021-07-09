@@ -3,7 +3,6 @@ import axios from "axios";
 
 // Importing the components
 import Header from "./Header";
-import AnimeCardContainer from "./AnimeCardContainer";
 import MainSection from "./MainSection";
 
 const App = () => {
@@ -31,7 +30,6 @@ const App = () => {
       <Header getSearchedTerm={getSearchedTerm} />
       <div className="h-8"></div>
       <MainSection obtainedList={results} />
-      {/* <AnimeCardContainer /> */}
     </>
   );
 };

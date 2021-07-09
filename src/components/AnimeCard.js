@@ -19,7 +19,7 @@ const AnimeCard = (props) => {
         href={animeURL}
         alt="Anime"
         target="blank"
-        className="bg-yellow-500 w-full text-gray-900 font-bold py-3 rounded-sm inline-block"
+        className="bg-yellow-400 hover:bg-yellow-500 w-full text-gray-900 font-bold py-3 rounded-sm inline-block"
       >
         Show Details
       </a>

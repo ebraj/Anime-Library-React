@@ -4,6 +4,7 @@ import axios from "axios";
 // Importing the components
 import Header from "./Header";
 import MainSection from "./MainSection";
+import Footer from "./Footer";
 
 const App = () => {
   const [results, setResults] = useState([]);
@@ -30,6 +31,8 @@ const App = () => {
       <Header getSearchedTerm={getSearchedTerm} />
       <div className="h-8"></div>
       <MainSection obtainedList={results} />
+      <div className="h-8"></div>
+      <Footer />
     </>
   );
 };

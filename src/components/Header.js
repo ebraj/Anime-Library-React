@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Header = (props) => {
   // Object Destructuring
@@ -24,9 +24,9 @@ const Header = (props) => {
           value={search}
           type="text"
           placeholder="Search for Anime"
-          className="uppercase px-6 py-3 bg-blue-100 bg-opacity-10 placeholder-gray-500 outline-none text-gray-100 rounded-sm"
+          className="sm:w-auto w-full uppercase px-6 py-3 bg-blue-100 bg-opacity-10 placeholder-gray-500 outline-none text-gray-100 rounded-sm"
         />
-        <button className="m-1 px-6 py-3 bg-pink-500 hover:bg-pink-600 text-gray-100 rounded-sm">
+        <button className="sm:mx-1 sm:my-0 my-2 px-6 py-3 bg-pink-500 hover:bg-pink-600 text-gray-100 rounded-sm w-full sm:w-auto">
           Search
         </button>
       </form>

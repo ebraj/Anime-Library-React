@@ -2,7 +2,6 @@ import React from "react";
 
 const AnimeItem = (props) => {
   const { title, animeURL } = props;
-  console.log(animeURL);
   return (
     <a
       href={animeURL}
